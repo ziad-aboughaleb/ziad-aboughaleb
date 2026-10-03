@@ -3,9 +3,9 @@ name: Generate README
 on:
   push:
     branches: [main]
-    paths: ["readme.source.md"]
+    paths: ["readme.source.md", ".github/scripts/inject-stats.sh"]
   schedule:
-    - cron: "0 */12 * * *" # run every 12 hours
+    - cron: "0 */12 * * *" # refresh stats twice a day
   workflow_dispatch:
 
 permissions:
@@ -17,8 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Fills the commit / PR / contributed-to placeholders with live numbers.
+      # Edits only the CI workspace copy; readme-aura commits README.md and the SVGs.
+      - name: Inject activity stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/inject-stats.sh ziad-aboughaleb readme.source.md
+
       - name: Generate README
         uses: collectioneur/readme-aura@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_user: ziad-aboughaleb
+          github_user: ziad-aboughaleb # pinned: repo/language stats always come from this account
