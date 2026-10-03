@@ -166,7 +166,7 @@
     ></div>
     <div
       style={{
-        gap: 44,
+        gap: 32,
         alignItems: "center",
         justifyContent: "center",
         padding: "22px 32px",
