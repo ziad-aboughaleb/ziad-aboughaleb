@@ -1,4 +1,4 @@
-```aura width=800 height=490 link="https://ziad-aboughaleb.vercel.app"
+```aura width=800 height=490 link="https://ziad-aboughaleb.vercel.app" inline align=center
 <div
   style={{
     flexDirection: "column",
