@@ -1,4 +1,4 @@
-```aura width=850 height=525 link="https://ziad-aboughaleb.vercel.app" inline align=center
+```aura width=900 height=525 link="https://ziad-aboughaleb.vercel.app" inline align=center
 <div
   style={{
     flexDirection: "column",
@@ -14,7 +14,7 @@
   }}
 >
   <style>{`@keyframes aur-r{0%,100%{transform:translate(0,0);opacity:.7}50%{transform:translate(30px,-14px);opacity:1}}@keyframes aur-l{0%,100%{transform:translate(0,0);opacity:.65}50%{transform:translate(-26px,12px);opacity:1}}@keyframes aur-p{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.18);opacity:.45}}@keyframes aur-s{0%{transform:translate(-900px,0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(900px,0);opacity:0}}#e0{animation:aur-r 7.0s ease-in-out infinite 0.0s}#e1{animation:aur-l 8.2s ease-in-out infinite 0.3s}#e2{animation:aur-r 9.4s ease-in-out infinite 0.6s}#e3{animation:aur-p 10.6s ease-in-out infinite 0.9s}#e4{animation:aur-l 11.8s ease-in-out infinite 1.2s}#scan{animation:aur-s 6s linear infinite}`}</style>
-  <svg width="800" height="490" style={{ position: "absolute", top: 0, left: 0 }}>
+  <svg width="900" height="525" style={{ position: "absolute", top: 0, left: 0 }}>
     <defs>
       <radialGradient id="g0" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stopColor="rgba(138,43,226,0.5)" />
