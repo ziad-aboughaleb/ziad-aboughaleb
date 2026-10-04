@@ -1,0 +1,33 @@
+name: Compile and Release CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cv/cv.tex"
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Tectonic
+        uses: wookayin/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile LaTeX to PDF
+        run: tectonic cv/cv.tex
+
+      - name: Upload PDF to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          files: cv.pdf
+          make_latest: true
