@@ -16,16 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 1. Added caching to speed up your builds
-      - name: Cache Tectonic packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Tectonic
-          key: ${{ runner.os }}-tectonic-${{ hashFiles('cv/cv.tex') }}
-          restore-keys: |
-            ${{ runner.os }}-tectonic-
-
-      # 2. Corrected the action name here
       - name: Setup Tectonic
         uses: wtfjoke/setup-tectonic@v4
         with:
