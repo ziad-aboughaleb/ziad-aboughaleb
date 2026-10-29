@@ -1,3 +1,3 @@
 <p align="center">
-<a href="https://ziad-aboughaleb.vercel.app"><img src="./.github/assets/readme-aura-component-0-9c45b56b.svg" width="900" height="525" /></a>
+<a href="https://ziad-aboughaleb.vercel.app"><img src="./.github/assets/readme-aura-component-0-01d43944.svg" width="900" height="525" /></a>
 </p>
