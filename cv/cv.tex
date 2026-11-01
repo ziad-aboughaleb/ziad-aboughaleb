@@ -233,11 +233,18 @@ development workflow to contribute features and integrate work across the team}
 
 \resumeSubheading
 {\textbf{AI-Powered Job Hunter Pipeline}}{Oct 2026}
-{\emph{Python, Pydantic, LLMs (Gemini/OpenAI), Telegram API, GitHub Actions}}{\href{https://github.com/ziad-aboughaleb/job-hunter}{\underline{GitHub}}}
+{\emph{Python, Pydantic, LLMs (Gemini/OpenAI), Telegram API, GitHub
+Actions}}{\href{https://github.com/ziad-aboughaleb/job-hunter}{\underline{GitHub}}}
 \resumeItemListStart
-\resumeItem{Engineered a highly concurrent Python pipeline that aggregates remote tech jobs across major ATS platforms and evaluates them using LLMs based on strict candidate preferences.}
-\resumeItem{Designed a decoupled architecture (discover, fetch, evaluate, send) featuring dynamic rate-limiting, ThreadPool concurrency, and persistent JSON state management to ensure fault tolerance.}
-\resumeItem{Integrated Telegram's API to instantly deliver high-scoring job matches and custom AI-generated application pitches directly to mobile, automated via GitHub Actions.}
+\resumeItem{Engineered a highly concurrent Python pipeline to
+  aggregate ATS job postings, bypassing frontend WAFs by directly
+querying underlying ATS APIs (Greenhouse, Lever, etc.).}
+\resumeItem{Leveraged OpenAI/Gemini with strict Pydantic JSON schemas
+  to evaluate candidate-job fit, enforcing strict scoring rubrics
+against a defined CV and preference profile.}
+\resumeItem{Designed a zero-database, decoupled architecture with
+  ThreadPool concurrency and file-locking, automating real-time rich
+Telegram alerts via GitHub Actions.}
 \resumeItemListEnd
 
 \resumeSubheading
