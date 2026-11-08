@@ -37,12 +37,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Adjust margins (Tightened for 1-page fit)
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -89,15 +89,18 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{
+\newcommand{\resumeSubHeadingListStart
+}{
   \begin{itemize}[
         leftmargin=0.15in,
-        label={}
+        label={},
+        itemsep=-2pt
     ]}
-    \newcommand{\resumeSubHeadingListEnd}{
+    \newcommand{
+    \resumeSubHeadingListEnd}{
 \end{itemize}}
 \newcommand{\resumeItemListStart}{
-\begin{itemize}}
+\begin{itemize}[itemsep=-1pt, parsep=2pt]}
     \newcommand{\resumeItemListEnd}{
 \end{itemize}\vspace{-5pt}}
 
@@ -124,6 +127,7 @@
 \section{Education}
 
 \resumeSubHeadingListStart
+
 \resumeSubheading
 {Faculty of Electronic Engineering, Menoufia University}{Expected
 Graduation,Oct 2023}
@@ -139,12 +143,14 @@ Logic, \textbf{Computer Networks}, Linear Algebra, Probability \& Statistics}
 \resumeItem{Completed front-end, back-end, and full-stack tracks scoring
 \textbf{98.92\%}, \textbf{98.78\%}, and \textbf{98.85\%} respectively}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
 
 \resumeSubHeadingListStart
+
 \resumeSubheading
 {SEF Academy}{Aug 2026 -- Sep 2026}
 {Back-End Web Development Trainee $|$
@@ -192,6 +198,7 @@ managing server state with \textbf{TanStack Query}.}
   developing a dedicated admin dashboard featuring \textbf{Recharts}
 data visualization.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -246,6 +253,7 @@ scalable, component-driven directory structure.}
   for the contact page by building a lightweight, client-side
 submission flow utilizing \textbf{EmailJS} and React.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
