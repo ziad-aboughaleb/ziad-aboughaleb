@@ -18,18 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-% \input{glyphtounicode}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -55,8 +44,8 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-% \pdfgentounicode=1
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
 
 %-------------------------
 % Custom commands
@@ -66,38 +55,16 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}
 \item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r} \textbf{#1} & #2
-    \\ \textit{\small#3} & \textit{\small #4} \\
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \small#1 & #2
-    \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart
-}{
-  \begin{itemize}[
-        leftmargin=0.15in,
-        label={},
-        itemsep=-2pt
-    ]}
-    \newcommand{
-    \resumeSubHeadingListEnd}{
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-2pt]
+    }
+    \newcommand{\resumeSubHeadingListEnd}{
 \end{itemize}}
 \newcommand{\resumeItemListStart}{
 \begin{itemize}[itemsep=-1pt, parsep=2pt]}
@@ -119,11 +86,9 @@
   $|$
   \href{mailto:ziadaboughaleb@gmail.com}{\underline{ziadaboughaleb@gmail.com}}
   $|$
-  \href{https://linkedin.com/in/ziad-aboughaleb}{\underline{
-      linkedin: ziad-aboughaleb
-  }}
+  \href{https://linkedin.com/in/ziad-aboughaleb}{\underline{linkedin.com/in/ziad-aboughaleb}}
   $|$
-  \href{https://github.com/ziad-aboughaleb}{\underline{github: ziad-aboughaleb}}
+  \href{https://github.com/ziad-aboughaleb}{\underline{github.com/ziad-aboughaleb}}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -132,19 +97,21 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Faculty of Electronic Engineering, Menoufia University}{Expected
-Graduation,Oct 2023}
+{Faculty of Electronic Engineering, Menoufia University}{2023 --
+Expected Oct 2028}
 {B.Sc. Electrical, Electronics, and Communications Engineering}{Menoufia, Egypt}
 \resumeItemListStart
-\resumeItem{Relevant Coursework: \textbf{Data Structures \& Algorithms}, Digital
-Logic, \textbf{Computer Networks}, Linear Algebra, Probability \& Statistics}
+\resumeItem{Relevant Coursework: \textbf{Data Structures \&
+  Algorithms}, Digital Logic, \textbf{Computer Networks}, Linear
+Algebra, Probability \& Statistics}
 \resumeItemListEnd
+
 \resumeSubheading
 {SEF Academy}{Nov 2025 -- Sep 2026}
 {Full-Stack Web Development Program}{Remote}
 \resumeItemListStart
-\resumeItem{Completed front-end, back-end, and full-stack tracks scoring
-\textbf{98.92\%}, \textbf{98.78\%}, and \textbf{98.85\%} respectively}
+\resumeItem{Completed front-end, back-end, and full-stack tracks
+scoring \textbf{98.92\%}, \textbf{98.78\%}, and \textbf{98.85\%} respectively}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -191,7 +158,7 @@ Demo}}}{Remote}
 \resumeItem{Accelerated frontend development for an \textbf{11-person
   team} by architecting a scalable \textbf{Turborepo monorepo}
   containing 2 apps and 4 shared \textbf{npm workspaces} (UI, API,
-Utils, Config) using \textbf{React 19, Vite, and Tailwind CSS v4}.}
+Utils, Config) using \textbf{React, Vite, and Tailwind CSS}.}
 \resumeItem{Enabled secure transaction processing and dynamic product
   discovery across \textbf{6+ core storefront features} (cart,
   wishlist, search) by integrating \textbf{Stripe checkout} and
@@ -210,13 +177,13 @@ data visualization.}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{\textbf{AI-Powered Job Hunter Pipeline}}{Oct 2026}
+{\textbf{AI-Powered Job Hunter Pipeline} (Published PyPI CLI)}{Oct 2026}
 {\emph{Python, Pydantic, LLMs (Gemini/OpenAI), Telegram API, GitHub
 Actions}}{\href{https://github.com/ziad-aboughaleb/job-hunter}{\underline{GitHub}}}
 \resumeItemListStart
 \resumeItem{Aggregated \textbf{nearly 20,000 ATS job postings daily}
-  by engineering a highly concurrent Python pipeline that bypasses WAFs
-to directly query underlying APIs.}
+  by engineering a highly concurrent \textbf{Python CLI package} that
+bypasses WAFs by querying underlying ATS APIs directly.}
 \resumeItem{Achieved a \textbf{100\% precision rate} in filtering
   unqualified roles (eliminating manual review of rejected matches) by
   leveraging \textbf{OpenAI/Gemini} with strict \textbf{Pydantic JSON
@@ -228,9 +195,9 @@ that automates real-time \textbf{Telegram} alerts via \textbf{GitHub Actions}.}
 
 \resumeSubheading
 {\textbf{Next.js E-Commerce Platform}}{May 2026 -- Jun 2026}
-{\emph{Next.js, React 19, TypeScript, Redux Toolkit, RTK Query,
-    Tailwind CSS
-v4}}{\href{https://github.com/ziad-aboughaleb/Store}{\underline{GitHub}}
+{\emph{Next.js, React, TypeScript, Redux Toolkit, RTK Query,
+    Tailwind
+CSS}}{\href{https://github.com/ziad-aboughaleb/Store}{\underline{GitHub}}
 $|$ \href{https://store-two-mu.vercel.app/}{\underline{Live Demo}}}
 \resumeItemListStart
 \resumeItem{Rendered \textbf{194+ dynamic products} with instant
@@ -242,21 +209,6 @@ App Router}.}
 global state utilizing \textbf{Redux Toolkit} and \textbf{redux-persist}.}
 \resumeItemListEnd
 
-\resumeSubheading
-{\textbf{Personal Portfolio Website}}{Apr 2026}
-{\emph{Next.js, React, TypeScript, Tailwind CSS,
-EmailJS}}{\href{https://github.com/ziad-aboughaleb/portfolio}{\underline{GitHub}}
-$|$ \href{https://ziad-aboughaleb.vercel.app/}{\underline{Live Demo}}}
-\resumeItemListStart
-\resumeItem{Architected a responsive developer portfolio centralizing
-  \textbf{6 projects and case studies} by utilizing
-  \textbf{Next.js, React, TypeScript, and Tailwind CSS} within a
-scalable, component-driven directory structure.}
-\resumeItem{Achieved a \textbf{96/100 Lighthouse performance score}
-  for the contact page by building a lightweight, client-side
-submission flow utilizing \textbf{EmailJS} and React.}
-\resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
@@ -265,8 +217,7 @@ submission flow utilizing \textbf{EmailJS} and React.}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{
     \item{
-        \textbf{Languages}{: HTML, CSS, JavaScript, TypeScript,
-        Python} \\
+        \textbf{Languages}{: HTML, CSS, JavaScript, TypeScript, Python} \\
         \textbf{Front-End}{: React, Next.js, Vite, Tailwind CSS,
         Redux Toolkit, RTK Query, TanStack Query/Form} \\
         \textbf{Back-End}{: Node.js, Express.js, MongoDB, Mongoose,
@@ -274,7 +225,7 @@ submission flow utilizing \textbf{EmailJS} and React.}
         \textbf{CS Foundations}{: Data Structures \& Algorithms,
         Computer Networks, Digital Logic} \\
         \textbf{Tools}{: Git, GitHub, GitHub Actions, npm Workspaces,
-        Docker, Unix/Linux, Turborepo, Vercel, Vitest} \\
+        Docker, Nix/NixOS, Unix/Linux, Turborepo, Vercel, Vitest} \\
         \textbf{Integrations}{: LLM APIs (OpenAI/Gemini), Telegram
         API, Stripe, PayPal, Cloudinary, EmailJS} \\
         \textbf{Familiar With}{: Nest.js, PostgreSQL, Prisma,
